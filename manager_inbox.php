@@ -35,7 +35,7 @@
 				<?php
 				sno=1;
 				$conn = new mysqli('localhost','root','','hnidb');
-				$sql = "SELECT subject,date,status FROM appoint_table uid=1 ";
+				$sql = "SELECT subject,date,status FROM m_appoint_table uid=1 ";
 				$result = $conn->query($sql);
 				
 				if ($result->num_rows > 0) {
