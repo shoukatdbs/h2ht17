@@ -66,13 +66,13 @@
 							</a>
 						</li>
 					</ul>
-					<form action="student_home.jsp">
+					<form action="apply.jsp" method="post">
 					<div class="tab-content tab-space">
 						<div class="tab-pane active" id="permission_letter">
 							<div id="inputs">
 								<label for="department">Location</label>
 									<div class="col-lg-6 col-md-8">
-										<select class="selectpicker" name="pl_dept">
+										<select class="selectpicker" name="user_location">
 											<option value="IT">Kukatpally</option>
 											<option value="CSE">Madhapur</option>
 											<option value="ECE">BHEL</option>
@@ -84,19 +84,19 @@
 								
 								<div class="form-group">
 									<label class="label-control">Date</label>
-									<input type="text" class="form-control datetimepicker" name="pl_date">
+									<input type="text" class="form-control datetimepicker" name="user_date">
 								</div>
 								
 								<div class="form-group">
 									<label for="exampleInput1" class="bmd-label-floating">Subject</label>
-									<input type="text" class="form-control" id="exampleInput1" name="pl_subject">
+									<input type="text" class="form-control" id="exampleInput1" name="user_subject">
 									<span class="bmd-help">Subject appears as Title for your letter.</span>
 								</div>
 								<div class="form-group">
 									<label for="exampleInput1" class="bmd-label-floating">Reason</label>
-									<input type="text" class="form-control" id="exampleInput1" name="pl_reason">
+									<input type="text" class="form-control" id="exampleInput1" name="user_reason">
 								</div>
-								<button type="submit" class="btn btn-rose btn-round" value="pl_submit" name="pl_submit">Letter  Submit</button>
+								<button type="submit" class="btn btn-rose btn-round" value="pl_submit" name="pl_submit">Apply</button>
 							</div>
 						</div>
 						
@@ -108,7 +108,7 @@
 									<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 								</div>
 								</span>
-								<iframe class="embed-responsive-item" src="status.jsp" frameborder="0" allowfullscreen width="100%" scrolling="yes">                          
+								<iframe class="embed-responsive-item" src="randc.jsp" frameborder="0" allowfullscreen width="100%" scrolling="yes">                          
 								</iframe>
 							</div>	
 						</div>
@@ -119,7 +119,7 @@
 									<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 								</div>
 								</span>
-								<iframe class="embed-responsive-item" src="status.jsp" frameborder="0" allowfullscreen width="100%" scrolling="yes">                          
+								<iframe class="embed-responsive-item" src="inbox.jsp" frameborder="0" allowfullscreen width="100%" scrolling="yes">                          
 								</iframe>
 							</div>	
 						</div>
