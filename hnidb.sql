@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2018 at 01:05 AM
+-- Generation Time: Nov 18, 2018 at 07:28 AM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -43,10 +43,13 @@ CREATE TABLE `admin_table` (
 --
 
 CREATE TABLE `appoint_table` (
-  `uid` varchar(250) NOT NULL,
-  `wid` varchar(250) NOT NULL,
-  `status` varchar(250) NOT NULL,
-  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `uid` int(20) NOT NULL,
+  `location` varchar(100) NOT NULL,
+  `date` varchar(100) NOT NULL,
+  `time` varchar(100) NOT NULL,
+  `subject` varchar(500) NOT NULL,
+  `reason` varchar(1000) NOT NULL,
+  `status` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
