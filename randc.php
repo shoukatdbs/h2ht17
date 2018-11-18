@@ -35,7 +35,7 @@
 				<?php
 				sno=1;
 				$conn = new mysqli('localhost','root','','hnidb');
-				$sql = "SELECT subject, FROM appoint_table";
+				$sql = "SELECT subject,date FROM appoint_table";
 				$result = $conn->query($sql);
 				
 				if ($result->num_rows > 0) {
@@ -44,7 +44,7 @@
 						echo "<tr>" ;	
 						echo "<td>".sno."</td>";
 						sno++;
-						echo "<td>".$row["select"]."</td>";
+						echo "<td>".$row["subject"]."</td>";
 						echo "<td>".$row["date"]."</td>";
 						echo "<td><button type='submit' class='btn btn-rose btn-round' value='pl_submit' name='pl_submit'>RESCHEDULE</button>";
 						echo "<button type='submit' class='btn btn-rose btn-round' value='pl_submit' name='pl_submit'>CANCEL</button></>";
