@@ -1,0 +1,47 @@
+{
+	"branches": [{
+			"bankName": "DBS",
+			"branchName": "Bangalore Branch",
+			"branchAddress": "3, Salarpuria Windsor Ulsoor Road",
+			"branchCity": "Bangalore",
+			"branchPinCode": "560042",
+			"branchTelephone": "080-6632 8888"
+		}, {
+			"bankName": "DBS",
+			"branchName": "Chennai Branch",
+			"branchAddress": "806, Anna Salai",
+			"branchCity": "Chennai",
+			"branchPinCode": "600002",
+			"branchTelephone": "044-6656 8888"
+		}, {
+			"bankName": "DBS",
+			"branchName": "Cuddalore Branch",
+			"branchAddress": "No.1, Anugraha Satellite Township Periyakattupalayam, East Coast Road",
+			"branchCity": "Cuddalore Dist",
+			"branchPinCode": "605007",
+			"branchTelephone": "41-4230 5100"
+		}, {
+			"bankName": "DBS",
+			"branchName": "Kolhapur Branch",
+			"branchAddress": "Amit Plaza 199/4, 1st floor, Gandhinagar Main Road",
+			"branchCity": "Kolhapur",
+			"branchPinCode": "416119",
+			"branchTelephone": "023-1305 0100"
+		}, {
+			"bankName": "DBS",
+			"branchName": "Kolhapur Branch",
+			"branchAddress": "Amit Plaza 199/4, 1st floor, Gandhinagar Main Road",
+			"branchCity": "Kolhapur",
+			"branchPinCode": "416119",
+			"branchTelephone": "023-1305 0100"
+		}, {
+			"bankName": "DBS",
+			"branchName": "Kolkata  Branch",
+			"branchAddress": "4A, Little Russel Street",
+			"branchCity": "Kolkata",
+			"branchPinCode": "700071",
+			"branchTelephone": "033-6621 8888"
+		}
+
+	]
+}
