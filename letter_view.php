@@ -6,7 +6,7 @@
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-
+    PA Student - HOME
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -21,49 +21,44 @@
 </head>
 <body>
 
-		<div class="table-responsive">          
-			<table class="table">
-				<thead>
-					<tr>
-						<th>S.No</th>
-						<th>Subject</th>
-						<th>Applied_on</th>
-						<th>Status</th>
-					</tr>
-				</thead>
-				<tbody>
-				<?php
+
+<form action='status_change.php' method="post">
+<div class="container ">
+
+
+<?php
 				sno=1;
+				$subject=_GET['subject'];
 				$conn = new mysqli('localhost','root','','hnidb');
-				$sql = "SELECT subject,date,status FROM m_appoint_table uid=1 ";
+				$sql = "SELECT reason FROM appoint_table uid=1 and subject='".$subject."' ";
 				$result = $conn->query($sql);
 				
 				if ($result->num_rows > 0) {
     
 					while($row = $result->fetch_assoc()) {
-						echo "<tr>" ;	
-						echo "<td>".sno."</td>";
-						sno++;
-						echo "<a href='manager_letter_view.php?subjectname=",urlencode(.$row['subject'].),"'><td>".$row['subject']."</td></a>";
-						echo "<td>".$row["date"]."</td>";
-						echo "<td>".$row["status"]."</td>";
-						
-						echo "</tr>";
+						echo $result['reason'] ;	
 					}
 				} 
 				else {
 					echo "0 results";
 				}
+				echo "<button type='submit' class='btn btn-success btn-round' value='accept' name='cancel'>ACCEPT</button>";
+				echo "<button type='submit' class='btn btn-danger btn-round' value='reject' name='cancel'>REJECT</button>";
 				$conn->close();
 				?>
-				
-				
-				</tbody>
-			</table>
+
+
+
+
+
 		</div>
+		</form>
 		
 		
-	
+		
+		
+		
+
 
 
 <!--   Core JS Files   -->

@@ -44,7 +44,7 @@
 						echo "<tr>" ;	
 						echo "<td>".sno."</td>";
 						sno++;
-						echo "<a href=''><td>".$row["subject"]."</td></a>";
+						echo "<a href='letter_view.php?subjectname=",urlencode(.$row['subject'].),"'><td>".$row['subject']."</td></a>";
 						echo "<td>".$row["date"]."</td>";
 						echo "<td>".$row["status"]."</td>";
 						
