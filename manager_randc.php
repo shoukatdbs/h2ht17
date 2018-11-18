@@ -21,7 +21,8 @@
 </head>
 <body>
 
-		<div class="table-responsive">          
+		<div class="table-responsive">  
+			<form action="manager_cancel.php" method="post">
 			<table class="table">
 				<thead>
 					<tr>
@@ -46,8 +47,8 @@
 						sno++;
 						echo "<td>".$row["subject"]."</td>";
 						echo "<td>".$row["date"]."</td>";
-						echo "<td><button type='submit' class='btn btn-rose btn-round' value='pl_submit' name='pl_submit'>RESCHEDULE</button>";
-						echo "<button type='submit' class='btn btn-rose btn-round' value='pl_submit' name='pl_submit'>CANCEL</button></>";
+						echo "<td><button type='submit' class='btn btn-rose btn-round' value='reschedule' name='reschedule'>RESCHEDULE</button>";
+						echo "<button type='submit' class='btn btn-rose btn-round' value='cancel' name='cancel'>CANCEL</button></>";
 						echo "</tr>";
 					}
 				} 
@@ -60,6 +61,7 @@
 				
 				</tbody>
 			</table>
+			</form>
 		</div>
 		
 		

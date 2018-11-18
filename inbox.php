@@ -44,7 +44,7 @@
 						echo "<tr>" ;	
 						echo "<td>".sno."</td>";
 						sno++;
-						echo "<td>".$row["select"]."</td>";
+						echo "<a href=''><td>".$row["subject"]."</td></a>";
 						echo "<td>".$row["date"]."</td>";
 						echo "<td>".$row["status"]."</td>";
 						
