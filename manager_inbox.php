@@ -33,9 +33,9 @@
 				</thead>
 				<tbody>
 				<?php
-				sno=1;
+				$sno=1;
 				$conn = new mysqli('localhost','root','','hnidb');
-				$sql = "SELECT subject,date,status FROM appoint_table uid=1 ";
+				$sql = "SELECT subject,date,status FROM m_appoint_table uid=1 ";
 				$result = $conn->query($sql);
 				
 				if ($result->num_rows > 0) {
@@ -43,7 +43,7 @@
 					while($row = $result->fetch_assoc()) {
 						echo "<tr>" ;	
 						echo "<td>".sno."</td>";
-						sno++;
+						$sno++;
 						echo "<td>".$row["select"]."</td>";
 						echo "<td>".$row["date"]."</td>";
 						echo "<td>".$row["status"]."</td>";

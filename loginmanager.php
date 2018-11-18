@@ -1,4 +1,37 @@
-<!DOCTYPE html>
+
+<?php
+
+ if(isset($_POST['submit'])){
+	 
+    $db=mysqli_connect('localhost','root','','hnidb') or die('unnable to connect ');
+	$username=$_POST['uid'];
+	$password=$_POST['pwd'];
+	echo $username;
+	if(!empty($username) && !empty($password)){
+	$query="select wid,wname,password from admin_table where wname=" ." '$username' and password='$password'";
+	$data=mysqli_query($db,$query) or die('unnable to query');
+	$rowcount=mysqli_num_rows($data);
+	if($rowcount==1)
+	{
+		$row=mysqli_fetch_array($data);
+		//echo $row;
+		//	echo 'success';
+		/*setcookie('user_id',$row['id']);
+		setcookie('username',$row['username']);*/
+		header('Location:managerapply.html');
+        
+	}
+	else{
+		echo'<h2> MISMAtch</h2> Sorry,you must enter a valid username and password'.'to log in an access this page.'; 
+    }
+	}
+	else
+	{
+		echo 'kindly fill the details';
+	}
+	
+   }
+   ?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -25,7 +58,7 @@
         <div class="row">
           <div class="col-lg-4 col-md-6 ml-auto mr-auto">
             <div class="card card-login">
-              <form class="form" method="" action="login.jsp">
+              <form class="form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <div class="card-header card-header-danger text-center">
                   <h4 class="card-title" >Appointment Manager Login</h4>
                   
@@ -46,7 +79,7 @@
                 </div>
 				<br/><br/>
 				<div class="footer text-center">
-                  <button type="submit" class="center btn btn-danger btn-link" >Get Started</button>
+                  <button type="submit" name ="submit" class="center btn btn-danger btn-link" >Get Started</button>
                 </div>
                 
               </form>
