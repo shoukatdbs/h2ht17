@@ -18,7 +18,7 @@
 		/*setcookie('user_id',$row['id']);
 		setcookie('username',$row['username']);*/
 		
-		header('Location:userhomepage.html');
+		//header('Location:userhomepage.html');
         
 	}
 	else{
@@ -86,9 +86,13 @@
 				<br/><br/>
 				<div class="footer text-center">
                   if you are a manager
-				  <?php
-				     header('Location:userhomepage.html');
-					 ?>
+				  <button onClick="click()">click here</button>
+				  <script>
+				    function click()
+					{ 
+					}
+					</script>
+				     
                 </div>
                 
               </form>

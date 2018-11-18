@@ -34,10 +34,11 @@
 				</thead>
 				<tbody>
 				<?php
-				$sno="";
-				if(isset($_COOKIE['user_id'])){
-					$sno=$_COOKIE['user_id'];
-				}
+				$sno=1;
+				/*if(isset($_COOKIE['user_id'])){
+					unset($_COOKIE['user
+				}*/
+				
 {
 				
 				$conn = new mysqli('localhost','root','','hnidb');
