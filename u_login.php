@@ -13,11 +13,11 @@
 	if($rowcount==1)
 	{
 		$row=mysqli_fetch_array($data);
-		echo $row;
-		echo 'success';
-		//setcookie('user_id',$row['id']);
-		//setcookie('username',$row['username']);
-		//header('Location:report1email.php');
+		//echo $row;
+		//echo 'success';
+		setcookie('user_id',$row['id']);
+		setcookie('username',$row['username']);
+		header('Location:userhomepage.html');
         
 	}
 	else{

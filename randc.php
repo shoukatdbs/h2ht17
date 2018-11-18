@@ -33,17 +33,22 @@
 				</thead>
 				<tbody>
 				<?php
-				sno=1;
+				$sno="";
+				if(isset($_COOKIE['user_id'])){
+					$sno=$_COOKIE['user_id'];
+				}
+{
+				
 				$conn = new mysqli('localhost','root','','hnidb');
 				$sql = "SELECT subject,date FROM appoint_table";
-				$result = $conn->query($sql);
+				$result = $conn->query($sql) or die('unnable to query');
 				
 				if ($result->num_rows > 0) {
     
 					while($row = $result->fetch_assoc()) {
 						echo "<tr>" ;	
 						echo "<td>".sno."</td>";
-						sno++;
+						$sno++;
 						echo "<td>".$row["subject"]."</td>";
 						echo "<td>".$row["date"]."</td>";
 						echo "<td><button type='submit' class='btn btn-rose btn-round' value='pl_submit' name='pl_submit'>RESCHEDULE</button>";
