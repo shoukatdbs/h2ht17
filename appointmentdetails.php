@@ -1,4 +1,18 @@
-<!DOCTYPE html>
+ <?php
+ error_reporting(E_ALL ^ E_DEPRECATED);
+  mysql_connect("localhost","root","");
+  mysql_select_db("hnidb");
+
+  if(isset($_POST['sub'] ) )
+    {
+        $r = $_POST['branch'];
+        $n = $_POST['t2'];
+        $m = $_POST['t3'];
+    }
+
+?> 
+
+
 <html lang="en">
 
 <head>
@@ -41,23 +55,35 @@
   </th>
 </tr>
 <tr>
+  <?php
+
+  $data = mysql_query("select  from details");
+  echo "<table border=1>";
+  echo "<tr><th> roll no. </th><th> name </th><th> mobile </th></tr>";
+  while($row = mysql_fetch_row($data) )
+  {
+    echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td></tr>";
+  }
+  echo "</table>";
+
+  ?>
   <center><td>Name</td>
   <td>Sample date</td>
   <td>Sample Time</td>
   <td>Sample Status</td></center>
   <td>
     <div class="col-md-6 ml-auto">
-    <span class="badge badge-pill badge-info">Confirm</span>
+    <a href="a"><span class="badge badge-pill badge-info">Confirm</span> </a>
     </div>
   </td>
   <td>
     <div class="col-md-6 ml-auto">
-    <span class="badge badge-pill badge-info">Cancel</span>
+    <a href="a"><span class="badge badge-pill badge-info">Cancel</span>  </a>
     </div>
   </td>
   <td>
     <div class="col-md-6 ml-auto">
-    <span class="badge badge-pill badge-info">Reschedule</span>
+    <a href="a"><span class="badge badge-pill badge-info">Reschedule</span></a>
     </div>
   </td>
 </tr>
