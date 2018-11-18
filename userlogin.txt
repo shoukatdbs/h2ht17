@@ -1,0 +1,7 @@
+CREATE SCHEMA dbsdb;
+
+CREATE TABLE dbsdb.userlogin ( 
+	userid               varchar(255)  NOT NULL  ,
+	password             varchar(255)  NOT NULL  ,
+	CONSTRAINT pk_userlogin_userid PRIMARY KEY ( userid )
+ ) engine=InnoDB;
