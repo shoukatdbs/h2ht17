@@ -18,7 +18,7 @@
 		/*setcookie('user_id',$row['id']);
 		setcookie('username',$row['username']);*/
 		
-		//header('Location:userhomepage.html');
+		header('Location:userhomepage.html');
         
 	}
 	else{
@@ -61,7 +61,7 @@
           <div class="col-lg-4 col-md-6 ml-auto mr-auto">
             <div class="card card-login">
               <form class="form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                <div class="card-header card-header-primary text-center">
+                <div class="card-header card-header-danger text-center">
                   <h4 class="card-title">User Login</h4>
                   
                 </div>

@@ -42,9 +42,12 @@
     
 					while($row = $result->fetch_assoc()) {
 						echo "<tr>" ;	
+
+						
 						echo "<td>".$sno."</td>";
 						$sno++;
-						echo "<td>".$row["subject"]."</td>";
+						echo "<a href='letter_view.php?subjectname=".urlencode($row['subject'])."'>'<td>".$row['subject']."</td></a>";
+//>>>>>>> 8262614e008bd982068e21f6f605c9f41d16d553
 						echo "<td>".$row["date"]."</td>";
 						echo "<td>".$row["status"]."</td>";
 						
